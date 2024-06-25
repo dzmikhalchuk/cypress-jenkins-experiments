@@ -27,7 +27,8 @@ pipeline {
         }
         stage('Test') {
             steps {
-                sh 'npm run test'
+                sh 'xvfb-run npx cypress verify'
+                sh 'xvfb-run npm run test'
             }
         }
     }
