@@ -26,8 +26,7 @@ pipeline {
             }
             steps {
                 sh 'npm i'
-                sh 'npm i npm-run-all --save-dev'
-                sh "npm run test:ci:record"
+                sh "npm run test"
             }
         }
         stage('Test') {
