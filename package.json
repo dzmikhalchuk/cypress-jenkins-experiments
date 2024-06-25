@@ -4,6 +4,8 @@
   },
 
   "scripts": {
-    "test": "npx cypress run --record --key a4b7a65f-8f87-4f44-8783-a8e0611a702a"
+    "test": "npx cypress run --record --key a4b7a65f-8f87-4f44-8783-a8e0611a702a",
+    "e2e:record": "cypress run --record",
+    "test:ci:record": "run-p --race start e2e:record"
   }
 }

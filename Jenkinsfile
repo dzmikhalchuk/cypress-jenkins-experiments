@@ -1,7 +1,7 @@
 pipeline {
     agent {
         docker { 
-            image 'node'
+            image 'cypress/base'
             args '-u root:root'
         }
     }
@@ -21,8 +21,12 @@ pipeline {
             }
         }
         stage('Install dependencies') {
+            environment {
+                CYPRESS_RECORD_KEY = "a4b7a65f-8f87-4f44-8783-a8e0611a702a"
+        }
             steps {
                 sh 'npm i'
+                sh "npm run test:ci:record"
             }
         }
         stage('Test') {
