@@ -1,0 +1,9 @@
+{
+  "devDependencies": {
+    "cypress": "^13.12.0"
+  },
+
+  "scripts": {
+    "test": "npx cypress run --record --key a4b7a65f-8f87-4f44-8783-a8e0611a702a"
+  }
+}
